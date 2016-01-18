@@ -1,1 +1,4 @@
-gogoggo
+(function($) {
+	$.alert();
+}
+)(jQuery)
