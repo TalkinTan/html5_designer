@@ -1,0 +1,36 @@
+{
+  "name": "html5_designer",
+  "version": "1.0.0",
+  "description": "搭建html5 设计器",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-connect": "^1.0.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^3.2.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-wiredep": "^3.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TalkingTan/html5_designer.git"
+  },
+  "keywords": [
+    "h5",
+    "designer"
+  ],
+  "author": "ttan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TalkingTan/html5_designer/issues"
+  },
+  "homepage": "https://github.com/TalkingTan/html5_designer"
+}

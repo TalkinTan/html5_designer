@@ -46,7 +46,18 @@ module.exports = function(grunt) {
     watch: {
       //监听的文件
       files: ['<%= jshint.files %>','app/index.html'],
-      tasks: ['jshint']
+      tasks: ['jshint'],
+      livereload: {
+        options: {
+          livereload: '<%=connect.options.livereload%>'  //监听前面声明的端口  35729
+        },
+        files: [  //下面文件的改变就会实时刷新网页
+          'app/*.html',
+          'app/style/{,*/}*.css',
+          'app/scripts/{,*/}*.js',
+          'app/images/{,*/}*.{png,jpg}'
+        ]
+      }
     },
     //wiredep自动将bower_components中的包加入到index.html中
     wiredep: {
@@ -65,7 +76,7 @@ module.exports = function(grunt) {
           options: {
           open: true, //自动打开网页 http://
           base: [
-              'app'  //主目录
+              './'  //主目录
                 ]
             }
         }
@@ -73,12 +84,12 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
+  //grunt.loadNpmTasks('grunt-contrib-concat');
+  //grunt.loadNpmTasks('grunt-contrib-uglify');
+  //grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-wiredep');
+  //grunt.loadNpmTasks('grunt-wiredep');
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.registerTask('serve', ['concat','connect','wiredep','uglify','jshint','watch']);
+  grunt.registerTask('serve', ['connect','watch']);
 
 };
