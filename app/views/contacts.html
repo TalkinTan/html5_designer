@@ -1,0 +1,9 @@
+<div>
+	<ul ng-repeat="contact in contacts" >
+		<li><a 
+			ng-href="#/contacts/{{contact.name}}"
+			ng-click="selectItem(contact)">{{contact.name}}</a>
+		</li>
+	</ul>
+	<div ui-view id="detail"></div>
+</div>
